@@ -1,0 +1,39 @@
+{
+  "name": "pomodoro-app",
+  "version": "1.0.0",
+  "description": "A pomodoro mobile app.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --hot --inline",
+    "build": "webpack",
+    "test": "mocha",
+    "feature": "wdio wdio.conf.js",
+    "sel": "java -jar selenium-server-standalone-2.53.0.jar"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjvalade/Pomodoro-App.git"
+  },
+  "author": "Casey Metz and MaryJane Valade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjvalade/Pomodoro-App/issues"
+  },
+  "homepage": "https://github.com/mjvalade/Pomodoro-App#readme",
+  "devDependencies": {
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.5",
+    "chai": "^3.5.0",
+    "css-loader": "^0.23.1",
+    "mocha": "^3.0.2",
+    "mocha-loader": "^0.7.1",
+    "node-sass": "^3.8.0",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.0"
+  }
+}
