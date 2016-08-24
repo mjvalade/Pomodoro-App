@@ -33,6 +33,9 @@
     "node-sass": "^3.8.0",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
+    "wdio-dot-reporter": "0.0.6",
+    "wdio-mocha-framework": "^0.4.0",
+    "webdriverio": "^4.2.8",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.15.0"
   }
