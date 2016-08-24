@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const changeDefault = require('../../lib/user-menu.js');
+const changeDefault = require('../../lib/settings.js');
 
 describe('our test bundle', function () {
   it('should work', function () {
