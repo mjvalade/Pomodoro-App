@@ -33,3 +33,8 @@ describe('settings functions', function(){
       });
   });
 });
+
+describe('Timer functionality', function(){
+
+
+});
