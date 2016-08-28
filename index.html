@@ -10,18 +10,16 @@
 <body>
   <h1>Tomato Pomodoro</h1>
   <button class = "menu-toggle">
-    <svg width="20px" height="15px" viewBox="120 162 20 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg width="20px" height="16px" viewBox="240 0 20 16" version="1.1" xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink">
       <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
       <desc>Created with Sketch.</desc>
       <defs></defs>
-      <path d="M121.5,174 C120.672,174 120,174.672 120,175.5 C120,176.328 120.672,177 121.5,177 C122.328,177 123,176.328 123,175.5 C123,174.672 122.328,174 121.5,174 L121.5,174 Z M125,177 L140,177 L140,175 L125,175 L125,177 Z M121.5,168 C120.672,168 120,168.672 120,169.5 C120,170.328 120.672,171 121.5,171 C122.328,171 123,170.328 123,169.5 C123,168.672 122.328,168 121.5,168 L121.5,168 Z M125,171 L140,171 L140,169 L125,169 L125,171 Z M121.5,162 C120.672,162 120,162.672 120,163.5 C120,164.328 120.672,165 121.5,165 C122.328,165 123,164.328 123,163.5 C123,162.672 122.328,162 121.5,162 L121.5,162 Z M125,165 L140,165 L140,163 L125,163 L125,165 Z" id="list-[#1497]" stroke="none" fill="#000000" fill-rule="evenodd"></path>
+      <path d="M240,16 L260,16 L260,14 L240,14 L240,16 Z M240,2 L260,2 L260,0 L240,0 L240,2 Z M240,9 L260,9 L260,7 L240,7 L240,9 Z" id="align_text_distribute-[#914]" stroke="none" fill="#000000" fill-rule="evenodd"></path>
     </svg>
   </button>
     <ul class="controls-container display" role="form">
-      <li class="">1<input type="range" id="slider-work" min="1" value="25" max="60" step="1" oninput="outputWkUpdate(value)">60<output for="slider-work" id="work-min"> 25</output></li>
-      <!-- <li><input class="work-input" type="text" placeholder="Set work interval"></li> -->
-      <li>1<input type="range" id="slider-break" min="1" value="5" max="30" step="1" oninput="outputBkUpdate(value)">30<output for="slider-break" id="break-min"> 5</output></li>
-      <!-- <li><input class="break-input" type="text" placeholder="Set break interval"></li> -->
+      <li class="">1<input type="range" id="slider-work" min="1" value="25" max="60" step="5" oninput="outputWkUpdate(value)">60<output for="slider-work" id="work-min"> 25</output></li>
+      <li>0<input type="range" id="slider-break" min="0" value="5" max="30" step="5" oninput="outputBkUpdate(value)">30<output for="slider-break" id="break-min"> 5</output></li>
       <li class="button-li"><button class="submit-button">Submit Changes</button></li>
       <li class="button-li"><button class="reset-default-button">Reset Defaults</button></li>
       <script>
@@ -35,7 +33,7 @@
     </ul>
   <section id="main">
     <canvas id="countdown" style="border: 1px dotted black" width="200" height="50"></canvas>
-    <div id="countdown-display"><span id="minutes">25</span>:<span id="seconds">00</span></div>
+    <div id="countdown-display"><span id="minutes" value="25">25</span>:<span id="seconds" value="00">00</span></div>
   </section>
   <button id="start-button">
     <svg width="50px" height="50px" viewBox="316 68 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
