@@ -1,9 +1,11 @@
 @import 'reset';
 
-$primary-text-color: #F00;
+$main-text-color: #F00;
+$main-text-font: 'Amatic SC', cursive;
+
 
 body {
-  color: $primary-text-color;
+  color: $main-text-color;
   // font-size: 2em;
   // display: flex;
   // flex-direction: row;
@@ -13,6 +15,7 @@ body {
 }
 
 h1 {
+  font-family: $main-text-font;
   display: inline-block;
   font-size: 4em;
   height: 5vh;
@@ -23,7 +26,7 @@ h1 {
 
 .menu-toggle {
   position: relative;
-  top: -33px;
+  top: -25px;
   left: 85vw;
   height: 5vh;
   width: 5%;
@@ -42,22 +45,20 @@ h1 {
   color: black;
   font-size: .75em;
   border: 1px dashed black;
-  padding: 5px;
-  width: 30%;
-  justify-content: center;
+  width: 100%;
+  // justify-content: center;
   text-align: center;
-  position: relative;
-  display: block;
-  top: 20px;
-  margin: auto;
+  // position: relative;
+  // top: 20px;
+  // margin: auto;
 }
 
 .button-li {
-  display: inline-block;
   margin: 5px;
 }
 
 output {
+  color: $main-text-color;
   font-size: 2em;
   margin-left: 10px;
 }
@@ -83,7 +84,8 @@ canvas {
 }
 
 #countdown-display {
-  color: $primary-text-color;
+  color: $main-text-color;
+  font-family: $main-text-font;
   font-size: 7em;
   display: flex;
   flex-direction: row;
@@ -92,16 +94,14 @@ canvas {
 
 #start-button {
   position: fixed;
-  top: 400px;
-  // width: 8vw;
-  // height: 7vh;
+  top: 450px;
+  left: 48%;
   border: none;
-  // border-radius: 25px;
   background: white;
 }
 
 // #minutes {
-//   color: $primary-text-color;
+//   color: $main-text-color;
 //   font-size: 2em;
 //   display: flex;
 //   flex-direction: row;
@@ -110,7 +110,7 @@ canvas {
 // }
 //
 // #seconds {
-//   color: $primary-text-color;
+//   color: $main-text-color;
 //   font-size: 2em;
 //   display: flex;
 //   flex-direction: row;
