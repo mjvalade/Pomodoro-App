@@ -4,23 +4,116 @@ $primary-text-color: #F00;
 
 body {
   color: $primary-text-color;
+  // font-size: 2em;
+  // display: flex;
+  // flex-direction: row;
+  // align-items: center;
+  height: 100vh;
+  width: 90%;
+}
+
+h1 {
+  display: inline-block;
   font-size: 4em;
+  height: 5vh;
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.menu-toggle {
+  position: relative;
+  top: -33px;
+  left: 85vw;
+  height: 5vh;
+  width: 5%;
+  border: none;
+  background: white;
+  display: inline-block;
+}
+
+// Allows for toggle on/off settings menu
+.display {
+  display: none;
+}
+
+// Settings menu content
+.controls-container {
+  color: black;
+  font-size: .75em;
+  border: 1px dashed black;
+  padding: 5px;
+  width: 30%;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  display: block;
+  top: 20px;
+  margin: auto;
+}
+
+.button-li {
+  display: inline-block;
+  margin: 5px;
+}
+
+output {
+  font-size: 2em;
+  margin-left: 10px;
+}
+
+
+
+// Main timer content always on view
+#main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 200vh;
-}
-
-.controls-container {
-  border: 1px solid black;
+  justify-content: center;
+  margin: auto;
+  position: fixed;
+  top: 40vh;
   width: 100%;
 }
 
-#minutes {
-  color: $primary-text-color;
-  font-size: 2em;
+canvas {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-
 }
+
+#countdown-display {
+  color: $primary-text-color;
+  font-size: 7em;
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+#start-button {
+  position: fixed;
+  top: 400px;
+  // width: 8vw;
+  // height: 7vh;
+  border: none;
+  // border-radius: 25px;
+  background: white;
+}
+
+// #minutes {
+//   color: $primary-text-color;
+//   font-size: 2em;
+//   display: flex;
+//   flex-direction: row;
+//   // align-items: center;
+//
+// }
+//
+// #seconds {
+//   color: $primary-text-color;
+//   font-size: 2em;
+//   display: flex;
+//   flex-direction: row;
+//   // align-items: center;
+//
+// }
