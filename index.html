@@ -19,7 +19,7 @@
   </button>
     <ul class="controls-container display" role="form">
       <li class="">1<input type="range" id="slider-work" min="1" value="25" max="60" step="5" oninput="outputWkUpdate(value)">60<output for="slider-work" id="work-min"> 25</output></li>
-      <li>0<input type="range" id="slider-break" min="0" value="5" max="30" step="5" oninput="outputBkUpdate(value)">30<output for="slider-break" id="break-min"> 5</output></li>
+      <li>0<input type="range" id="slider-break" min="0" value="5" max="30" step="1" oninput="outputBkUpdate(value)">30<output for="slider-break" id="break-min"> 5</output></li>
       <li class="button-li"><button class="submit-button">Submit Changes</button></li>
       <li class="button-li"><button class="reset-default-button">Reset Defaults</button></li>
       <script>
@@ -35,8 +35,8 @@
     <canvas id="countdown" style="border: 1px dotted black" width="200" height="50"></canvas>
     <div id="countdown-display"><span id="minutes" value="25"></span>:<span id="seconds" value="00">00</span></div>
   </section>
-  <button class="pause" hidden="true">pause</button>
-  <button id="start-button" class="start-work">
+  <button class="pause" hidden="true" name = "pause">pause</button>
+  <button id="start-button" class="start-work" name = "start">
     <svg width="50px" height="50px" viewBox="316 68 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
       <desc>Created with Sketch.</desc>
