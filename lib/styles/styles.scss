@@ -12,13 +12,17 @@ body {
   // align-items: center;
   height: 100vh;
   width: 90%;
+  margin: auto;
+  background-image: url(/../../img/Tomato.png);
+  background-size: cover;
 }
 
 h1 {
+  color: black;
   font-family: $main-text-font;
   display: inline-block;
-  font-size: 4em;
-  height: 5vh;
+  font-size: 5em;
+  height: 2vh;
   width: 100%;
   text-align: center;
   margin-top: 5px;
@@ -26,7 +30,7 @@ h1 {
 
 .menu-toggle {
   position: relative;
-  top: -25px;
+  top: -35px;
   left: 85vw;
   height: 5vh;
   width: 5%;
@@ -43,8 +47,10 @@ h1 {
 // Settings menu content
 .controls-container {
   color: black;
+  background-color: white;
   font-size: .75em;
-  border: 1px dashed black;
+  border: 8px solid $main-text-color;
+  border-radius: 100px;
   width: 100%;
   // justify-content: center;
   text-align: center;
@@ -53,8 +59,33 @@ h1 {
   // margin: auto;
 }
 
+input[type=range]
+  ::-webkit-slider-thumb,
+	::-moz-range-thumb,
+	 ::-ms-thumb {
+    background-color: #163C00;
+}
+
 .button-li {
   margin: 5px;
+}
+
+.submit-button {
+  background-color: #FF8D77;
+  color: black;
+  border-right: 2px solid #AD1704;
+  border-bottom: 2px solid #AD1704;
+  border-top: 2px solid $main-text-color;
+  border-left: 2px solid $main-text-color;
+}
+
+.reset-default-button {
+  background-color: $main-text-color;
+  color: white;
+  border-right: 2px solid #AD1704;
+  border-bottom: 2px solid #AD1704;
+  border-top: 2px solid #FF8D77;
+  border-left: 2px solid #FF8D77;
 }
 
 output {
@@ -71,10 +102,8 @@ output {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: auto;
   position: fixed;
-  top: 40vh;
-  width: 100%;
+  width: 90%;
 }
 
 canvas {
@@ -84,9 +113,10 @@ canvas {
 }
 
 #countdown-display {
-  color: $main-text-color;
+  color: white;
   font-family: $main-text-font;
-  font-size: 7em;
+  font-size: 10em;
+  font-weight: bolder;
   display: flex;
   flex-direction: row;
   margin: 10px;
@@ -94,16 +124,22 @@ canvas {
 
 #start-button {
   position: fixed;
-  top: 450px;
-  left: 48%;
+  top: 65vh;
+  left: 50%;
+  margin-left: -40px;
   border: none;
+  // height: 80px;
+  // width: 80px;
   background: white;
+  // background-image: url(/../../img/Play.svg);
+
 }
 
 .pause {
   position: fixed;
-  top: 450px;
-  left: 48%;
+  top: 65vh;
+  left: 50%;
+  margin-left: -31px;
   border: none;
   background: white;
 }
