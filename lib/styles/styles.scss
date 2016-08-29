@@ -21,7 +21,7 @@ h1 {
   color: black;
   font-family: $main-text-font;
   display: inline-block;
-  font-size: 5em;
+  font-size: 7em;
   height: 2vh;
   width: 100%;
   text-align: center;
@@ -30,7 +30,7 @@ h1 {
 
 .menu-toggle {
   position: relative;
-  top: -35px;
+  top: -5em;
   left: 85vw;
   height: 5vh;
   width: 5%;
@@ -113,10 +113,9 @@ canvas {
 }
 
 #countdown-display {
-  color: white;
+  color: #FFEBCD;
   font-family: $main-text-font;
   font-size: 10em;
-  font-weight: bolder;
   display: flex;
   flex-direction: row;
   margin: 10px;
