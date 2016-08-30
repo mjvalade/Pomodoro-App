@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>Tomato Pomodoro</title>
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=true">
 </head>
 
@@ -18,8 +19,8 @@
     </svg>
   </button>
   <ul class="controls-container display" role="form">
-    <li class="">0<input type="range" id="slider-work" min="0" value="25" max="60" step="1" oninput="outputWkUpdate(value)">60<output for="slider-work" id="work-min"> 25</output></li>
-    <li>0<input type="range" id="slider-break" min="0" value="5" max="30" step="1" oninput="outputBkUpdate(value)">30<output for="slider-break" id="break-min"> 5</output></li>
+    <li class="slider-text">0<input type="range" id="slider-work" min="0" value="25" max="60" step="1" oninput="outputWkUpdate(value)">60<output for="slider-work" id="work-min"> 25</output><span class="menu-labels"> Work Time</span></li>
+    <li class="slider-text">0<input type="range" id="slider-break" min="0" value="5" max="30" step="1" oninput="outputBkUpdate(value)">30<output for="slider-break" id="break-min"> 5</output><span class="menu-labels"> Break Time</span></li>
     <li class="button-li"><button class="submit-button">Submit Changes</button></li>
     <li class="button-li"><button class="reset-default-button">Reset Defaults</button></li>
     <script>
@@ -32,33 +33,10 @@
     </script>
   </ul>
   <section id="main">
-    <!-- <canvas id="countdown" style="border: 1px dotted black" width="200" height="50"></canvas> -->
     <div id="countdown-display"><span id="minutes" value="25"></span>:<span id="seconds" value="00">00</span></div>
   </section>
-  <button class="pause" hidden="true" name = "pause">
-    <svg width="50px" height="50px" viewBox="4 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
-      <desc>Created with Sketch.</desc>
-      <defs></defs>
-      <g id="Pause" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(4.000000, 0.000000)">
-        <path d="M14,20 L16,20 L16,12 L14,12 L14,20 Z M18,20 L20,20 L20,12 L18,12 L18,20 Z" id="pause-[#1010]" fill="#000000"></path>
-        <g id="Group" fill="#000000">
-          <path d="M16.3991474,28.8798295 C9.51761135,28.8798295 3.91846535,23.2806835 3.91846535,16.3991474 C3.91846535,9.51761135 9.51761135,3.91846535 16.3991474,3.91846535 C23.2806835,3.91846535 28.8798295,9.51761135 28.8798295,16.3991474 C28.8798295,23.2806835 23.2806835,28.8798295 16.3991474,28.8798295 M0.798294839,16.3991474 C0.798294839,25.0154983 7.78279654,32 16.3991474,32 C25.0154983,32 32,25.0154983 32,16.3991474 C32,7.78279654 25.0154983,0.798294839 16.3991474,0.798294839 C7.78279654,0.798294839 0.798294839,7.78279654 0.798294839,16.3991474 Z" id="record-[#982]"></path>
-        </g>
-      </g>
-    </svg>
-  </button>
-  <button id="start-button" class="start-work" name = "start">
-    <svg width="50px" height="50px" viewBox="316 68 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
-      <desc>Created with Sketch.</desc>
-      <defs></defs>
-      <g id="Group" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(316.000000, 68.000000)">
-        <path d="M16.3991474,28.8798295 C9.51761135,28.8798295 3.91846535,23.2806835 3.91846535,16.3991474 C3.91846535,9.51761135 9.51761135,3.91846535 16.3991474,3.91846535 C23.2806835,3.91846535 28.8798295,9.51761135 28.8798295,16.3991474 C28.8798295,23.2806835 23.2806835,28.8798295 16.3991474,28.8798295 M0.798294839,16.3991474 C0.798294839,25.0154983 7.78279654,32 16.3991474,32 C25.0154983,32 32,25.0154983 32,16.3991474 C32,7.78279654 25.0154983,0.798294839 16.3991474,0.798294839 C7.78279654,0.798294839 0.798294839,7.78279654 0.798294839,16.3991474 Z" id="record-[#982]" fill="#000000"></path>
-        <polygon id="play-[#1001]" fill="#FF0000" points="13.2789769 10.1588064 13.2789769 22.6394885 24.1995737 16.3991474"></polygon>
-      </g>
-    </svg>
-  </button>
+  <button id="pause" hidden="true" name = "pause"></button>
+  <button id="start-button" class="start-work" name = "start"></button>
   <script src="main.bundle.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </body>
