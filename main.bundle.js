@@ -2272,7 +2272,7 @@
 	const format = __webpack_require__(16);
 	var $ = __webpack_require__(11);
 	var warnAudio = new Audio('./lib/sounds/glass_ping.mp3');
-	var endAudio = new Audio('./lib/sounds/gong.mp3');
+	var endAudio = new Audio('./lib/sounds/gong-short.m4a');
 
 	class Timer {
 	  constructor(interval, status) {
