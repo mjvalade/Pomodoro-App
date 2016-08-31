@@ -515,7 +515,8 @@
 
 	  currentTimer.timer.destroy();
 	  Settings.pageLoad();
-	  currentTimer.timer.set();
+	  $('ul').slideToggle('fast');
+
 	  // $display.text(`${Settings.workDefault}:00`)
 
 	  // TURN BACK ON BEFORE FINAL!!!!
@@ -525,6 +526,7 @@
 	$reset.on('click', function () {
 	  Settings.resetDefaults();
 	  Settings.pageLoad();
+	  $('ul').slideToggle('fast');
 	});
 
 	$start.on('click', function () {
@@ -535,13 +537,13 @@
 	      currentTimer.timer.render($display);
 	      setTimeout(tick, 0);
 	    }
-	    if (currentTimer.timer.isDestroyed) {
-	      return $display.text(Settings.workDefault + ':00');
-	    }
 	    if (currentTimer.timer.isExpired) {
 	      currentTimer.createTimer(currentTimer.timer.isWkClock, Settings.workDefault, Settings.breakDefault);
 	      currentTimer.timer.toggleCss();
 	      return $display.text(currentTimer.interval + ':00');
+	    }
+	    if (currentTimer.timer.isDestroyed) {
+	      clearTimeout();
 	    }
 	  });
 	});
