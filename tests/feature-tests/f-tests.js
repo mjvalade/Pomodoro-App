@@ -33,15 +33,15 @@ describe('Settings Menu', function(){
     assert.equal(text, '25:00');
   });
 
-  // it('reset button should set dispay to 25 min', function(){
-  //   browser.url('/');
-  //   browser.click('.menu-toggle');
-  //   browser.element('.controls-container').waitForVisible(30000);
-  //   browser.setValue('#slider-work', 45);
-  //   browser.click('.submit-button');
-  //   var text = browser.getText('#countdown-display')
-  //   assert.equal(text, '45:00');
-  // });
+  it('reset button should set dispay to 25 min', function(){
+    browser.url('/');
+    browser.click('.menu-toggle');
+    browser.element('.controls-container').waitForVisible(30000);
+    browser.setValue('#slider-work', 45);
+    browser.click('.submit-button');
+    var text = browser.getText('#countdown-display')
+    assert.equal(text, '45:00');
+  });
   });
 
 });
