@@ -17,6 +17,11 @@ describe('Settings Menu', function(){
     var val = browser.isExisting('.controls-container');
     assert.equal(val, true);
   });
+  it('should dispay to 25 min by default', function(){
+    browser.url('/');
+    var text = browser.getText('#countdown-display')
+    assert.equal(text, '25:00');
+  });
   // it('reset button should set dispay to 25 min', function(){
   //   browser.url('/');
   //   browser.click('.menu-toggle');
