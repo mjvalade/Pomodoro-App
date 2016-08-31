@@ -2195,10 +2195,12 @@
 	  context('changeDefaults() functions', function () {
 	    it('should override the default work interval', function () {
 	      Settings.changeDefaults(30, 5);
+
 	      assert.equal(Settings.workDefault, 30);
 	    });
 	    it('should override the default break interval', function () {
 	      Settings.changeDefaults(30, 10);
+
 	      assert.equal(Settings.breakDefault, 10);
 	    });
 	  });
@@ -2207,11 +2209,13 @@
 	    it('reset work interval to 25', function () {
 	      Settings.workDefault = 30;
 	      Settings.resetDefaults();
+
 	      assert.equal(Settings.workDefault, 25);
 	    });
 	    it('reset break interval to 5', function () {
 	      Settings.breakDefault = 650;
 	      Settings.resetDefaults();
+
 	      assert.equal(Settings.breakDefault, 5);
 	    });
 	  });
@@ -2240,7 +2244,6 @@
 	    it('stores the work and break defaults in localStorage', function () {
 	      Settings.workDefault = 30;
 	      Settings.breakDefault = 6;
-
 	      Settings.storeUserSettingsArray();
 
 	      assert.equal(localStorage.getItem('userSettingsArray'), JSON.stringify(Settings.userSettingsArray));
@@ -2248,9 +2251,10 @@
 	  });
 
 	  context('updateTimerDisplay() function', function () {
-	    it.skip('update the timer display', function () {
+	    it('update the timer display', function () {
 	      var settingsArray = [35, 8];
 	      Settings.updateTimerDisplay(settingsArray);
+
 	      assert.equal(Settings.workDefault, 35);
 	      assert.equal(Settings.breakDefault, 8);
 	    });
@@ -2262,13 +2266,16 @@
 	    it('should have a default startTime of null', function () {
 	      assert.equal(Timer.startTime, null);
 	    });
+
 	    it('should have a set() method to set startTime to Date.now()', function () {
 	      var timer = new Timer(30, true);
 	      timer.set();
+
 	      assert.equal(timer.startTime, Date.now());
 	    });
 	    it('should have a pause() method to pause the timer', function () {
 	      var timer = new Timer(30, true);
+
 	      assert.equal(timer.paused, false);
 	      timer.pause();
 	      assert.equal(timer.paused, true);
