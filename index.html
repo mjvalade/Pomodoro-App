@@ -9,29 +9,30 @@
 </head>
 
 <body>
-  <h1>Tomato Pomodoro</h1>
-  <button class = "menu-toggle">
-  </button>
-  <ul class="controls-container display" role="form">
-    <li class="slider-text">0<input type="range" id="slider-work" min="0" value="25" max="60" step="1" oninput="outputWkUpdate(value)">60<output for="slider-work" id="work-min"> 25</output><span class="menu-labels"> Work Time</span></li>
-    <li class="slider-text">0<input type="range" id="slider-break" min="0" value="5" max="30" step="1" oninput="outputBkUpdate(value)">30<output for="slider-break" id="break-min"> 5</output><span class="menu-labels"> Break Time</span></li>
-    <li class="button-li"><button class="submit-button">Submit Changes</button></li>
-    <li class="button-li"><button class="reset-default-button">Reset Defaults</button></li>
-    <script>
-    function outputWkUpdate(wTime) {
-      $('#work-min').val(wTime);
-    }
-    function outputBkUpdate(bTime) {
-      $('#break-min').val(bTime);
-    }
-    </script>
-  </ul>
   <section id="main">
-    <div id="countdown-display"><span id="minutes" value="25"></span>:<span id="seconds" value="00">00</span></div>
+    <button class = "menu-toggle"></button>
+    <h1>Tomato Pomodoro</h1>
+    <ul class="controls-container display" role="form">
+      <li class="slider-text">0<input type="range" id="slider-work" min="0" value="25" max="60" step="1" oninput="outputWkUpdate(value)">60<output for="slider-work" id="work-min"> 25</output><span class="menu-labels"> Work Time</span></li>
+      <li class="slider-text">0<input type="range" id="slider-break" min="0" value="5" max="30" step="1" oninput="outputBkUpdate(value)">30<output for="slider-break" id="break-min"> 5</output><span class="menu-labels"> Break Time</span></li>
+      <li class="button-li"><button class="submit-button">Submit Changes</button></li>
+      <li class="button-li"><button class="reset-default-button">Reset Defaults</button></li>
+      <script>
+      function outputWkUpdate(wTime) {
+        $('#work-min').val(wTime);
+      }
+      function outputBkUpdate(bTime) {
+        $('#break-min').val(bTime);
+      }
+      </script>
+    </ul>
+    <section id="main-timer">
+      <div id="countdown-display"><span id="minutes" value="25"></span>:<span id="seconds" value="00">00</span></div>
+    </section>
+    <button id="pause" hidden="true" name = "pause"></button>
+    <button id="start-button" class="start-work" name = "start"></button>
+    <script src="main.bundle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   </section>
-  <button id="pause" hidden="true" name = "pause"></button>
-  <button id="start-button" class="start-work" name = "start"></button>
-  <script src="main.bundle.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </body>
 </html>

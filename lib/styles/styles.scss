@@ -3,54 +3,33 @@
 $main-text-color: #F00;
 $main-text-font: 'Amatic SC', cursive;
 
-html {
+
+#main {
+  height: 100vh;
+  // width: 100%;
+  padding: 20px;
   background: url(/../../img/red-tomato.png) no-repeat center center fixed;
   background-size: cover;
-}
-
-body {
-  color: $main-text-color;
-  // font-size: 2em;
-  // display: flex;
-  // flex-direction: row;
-  // align-items: center;
-  height: 100vh;
-  width: 90%;
-  margin: auto;
-  // background-image: url(/../../img/red-tomato.png);
-  // background-size: cover;
 }
 
 h1 {
   color: black;
   font-family: $main-text-font;
-  -webkit-text-stroke: .5px black;
+  -webkit-text-stroke: .25px blanchedalmond;
   display: inline-block;
   font-size: 7em;
-  height: 2vh;
   width: 100%;
   text-align: center;
-  margin-top: 5px;
-}
-
-#slider-work {
-  background-color: green;
-  border: none;
-  box-shadow: none;
-}
-
-#slider-break {
-  background-color: green;
-  border: none;
-  box-shadow: none;
+  margin-bottom: 10px;
 }
 
 .menu-toggle {
   position: relative;
-  top: -5em;
-  left: 85vw;
-  height: 5%;
-  width: 5%;
+  // top: -20em;
+  // left: 82vw;
+  float: right;
+  height: 20px;
+  width: 20px;
   // height: 5vh;
   // width: 5%;
   border: none;
@@ -58,7 +37,7 @@ h1 {
   display: inline-block;
 }
 
-// Allows for toggle on/off settings menu
+// Allows for toggle on/off of Settings menu
 .display {
   display: none;
 }
@@ -66,13 +45,14 @@ h1 {
 // Settings menu content - sometimes hidden
 .controls-container {
   color: black;
-  background-color: white;
+  background-color: blanchedalmond;
   font-size: .75em;
   border: 8px solid $main-text-color;
   border-radius: 100px;
-  width: 100%;
+  width: 310px;
   padding: 5px;
   text-align: center;
+  margin: auto;
 }
 
 .slider-text {
@@ -84,15 +64,10 @@ h1 {
   font-size: 1.5em;
 }
 
-// input[type=range]
-//   ::-webkit-slider-thumb,
-// 	::-moz-range-thumb,
-// 	 ::-ms-thumb {
-//     background-color: #163C00;
-// }
-
 .button-li {
+  display: inline-block;
   margin: 5px;
+  width: 110px;
 }
 
 .submit-button {
@@ -122,28 +97,21 @@ output {
 
 
 // Main timer content always on view
-#main {
+#main-timer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  width: 90%;
-}
-
-canvas {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  // position: fixed;
+  // width: 100%;
 }
 
 #countdown-display {
-  color: #FFEBCD;
+  color: blanchedalmond;
   font-family: $main-text-font;
   font-size: 10em;
   display: flex;
   flex-direction: row;
-  margin: 10px;
 }
 
 #start-button {
@@ -155,28 +123,34 @@ canvas {
   height: 80px;
   width: 80px;
   background-size: auto;
-  background: url(/../../img/play.svg) no-repeat;
+  background: url(/../../img/Play.svg) no-repeat;
 
 }
 
-#pause {
-  position: fixed;
-  top: 80vh;
-  left: 50%;
-  margin-left: -40px;
-  border: none;
-  background: white;
-}
+// #pause {
+//   position: fixed;
+//   top: 80vh;
+//   left: 50%;
+//   margin-left: -40px;
+//   border: none;
+//   background: white;
+// }
 
 // Media Queries
-// Mobile view
-@media screen and (max-width: 600px) {
-  .menu-toggle {
-    top: -19em;
-    left: 82vw;
-  }
-
+@media screen and (min-width: 565px) {
   .controls-container {
 
+  }
+}
+
+@media screen and (min-width: 700px) {
+  h1 {
+    font-size: 7em;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 9em;
   }
 }
