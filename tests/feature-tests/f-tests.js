@@ -17,18 +17,30 @@ describe('Settings Menu', function(){
     var val = browser.isExisting('.controls-container');
     assert.equal(val, true);
   });
+
   it('should dispay to 25 min by default', function(){
     browser.url('/');
     var text = browser.getText('#countdown-display')
     assert.equal(text, '25:00');
   });
+
+  it('reset button should set dispay to 25 min', function(){
+    browser.url('/');
+    browser.click('.menu-toggle');
+    browser.element('.controls-container').waitForVisible(30000);
+    browser.click('.reset-default-button');
+    var text = browser.getText('#countdown-display')
+    assert.equal(text, '25:00');
+  });
+
   // it('reset button should set dispay to 25 min', function(){
   //   browser.url('/');
   //   browser.click('.menu-toggle');
-  //   browser.element('.controls-container').waitForVisible(3000);
-  //   browser.click('.reset-default-button');
+  //   browser.element('.controls-container').waitForVisible(30000);
+  //   browser.setValue('#slider-work', 45);
+  //   browser.click('.submit-button');
   //   var text = browser.getText('#countdown-display')
-  //   assert.equal(text, '25:00');
+  //   assert.equal(text, '45:00');
   // });
   });
 
