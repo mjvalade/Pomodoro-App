@@ -30,6 +30,7 @@ h1 {
   border: none;
   background: url(./styles/images/Hamburger.svg) no-repeat;
   display: inline-block;
+  outline: none;
 }
 
 // Allows for toggle on/off of Settings menu
@@ -52,6 +53,15 @@ h1 {
 
 .slider-text {
   font-family: 'Roboto', sans-serif;
+}
+
+input[type=range],
+	::-moz-range-track,
+	 ::-ms-track {
+	 -webkit-appearance: none;
+	 background-color: 3f91e5;
+	 width: 250px;
+	 height:20px;
 }
 
 .menu-labels {
@@ -117,7 +127,7 @@ output {
   width: 80px;
   background-size: auto;
   background: url(./styles/images/Play.svg) no-repeat;
-
+  outline: none;
 }
 
 // #pause {
@@ -130,6 +140,7 @@ output {
 // width: 80px;
 // background-size: auto;
 // background: url(./styles/images/pause.svg) no-repeat;
+// outline: none;
 // }
 
 // Media Queries

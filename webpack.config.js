@@ -12,7 +12,7 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.svg/, loader: "svg-url-loader" },
-      { test: /\.js$/, exclude: "/node_modules/", loader: "babel-loader" },
+      { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader?presets[]=es2015" },
       { test: /\.png$/, loader: "url-loader",
       query: { mimetype: "image/png" }},
       { test: /\.css$/, loader: "style!css" },
@@ -22,5 +22,4 @@ module.exports = {
   resolve: {
   extensions: ['', '.js', '.json', '.scss', '.css']
   }
-
 };

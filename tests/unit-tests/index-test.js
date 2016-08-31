@@ -2,6 +2,9 @@ const assert = require('chai').assert;
 const Settings = require('../../lib/scripts/settings.js');
 const Timer = require('../../lib/scripts/timer.js');
 
+/*globals describe, it, context */
+
+
 describe('our test bundle', function () {
   it('should be connected', function () {
     assert(true);
@@ -90,7 +93,7 @@ describe('Timer functionality', function(){
     });
     it('should have a pause() method to pause the timer', function () {
       var timer = new Timer(30, true);
-      
+
       assert.equal(timer.paused, false);
       timer.pause();
       assert.equal(timer.paused, true);
