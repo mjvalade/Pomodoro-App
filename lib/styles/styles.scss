@@ -7,7 +7,7 @@ $main-text-font: 'Amatic SC', cursive;
 #main {
   height: 100vh;
   padding: 20px;
-  background: url(./images/tomato-nobkgd.png) no-repeat center center fixed;
+  background: url(./styles/images/tomato-nobkgd.png) no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -28,7 +28,7 @@ h1 {
   height: 20px;
   width: 20px;
   border: none;
-  background: url(./images/Hamburger.svg) no-repeat;
+  background: url(./styles/images/Hamburger.svg) no-repeat;
   display: inline-block;
 }
 
@@ -116,7 +116,7 @@ output {
   height: 80px;
   width: 80px;
   background-size: auto;
-  background: url(./images/Play.svg) no-repeat;
+  background: url(./styles/images/Play.svg) no-repeat;
 
 }
 
@@ -129,7 +129,7 @@ output {
 // height: 80px;
 // width: 80px;
 // background-size: auto;
-// background: url(./images/pause.svg) no-repeat;
+// background: url(./styles/images/pause.svg) no-repeat;
 // }
 
 // Media Queries

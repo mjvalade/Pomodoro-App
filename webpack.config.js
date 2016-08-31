@@ -11,12 +11,12 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.svg/, loader: 'svg-url-loader' },
-      { test: /\.js$/, exclude: '/node_modules/', loader: 'babel-loader' },
-      { test: /\.png$/, loader: 'url-loader',
-      query: { mimetype: 'image/png' }},
+      { test: /\.svg/, loader: "svg-url-loader" },
+      { test: /\.js$/, exclude: "/node_modules/", loader: "babel-loader" },
+      { test: /\.png$/, loader: "url-loader",
+      query: { mimetype: "image/png" }},
       { test: /\.css$/, loader: "style!css" },
-      { test: /\.scss$/, loader: "style!css!sass" }
+      { test: /\.scss$/, loader: "style!css!resolve-url!sass?sourceMap" }
     ]
   },
   resolve: {
